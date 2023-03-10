@@ -3,7 +3,7 @@ FROM jenkins/jenkins:lts-jdk11
 USER root
 
 RUN apt-get update && \
-    apt install ruby-full
+    apt-get install ruby-full
 
 USER jenkins
 
