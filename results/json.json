@@ -1,0 +1,46 @@
+[
+  {
+    "id": "adding-numbers",
+    "uri": "features/sample.feature",
+    "keyword": "Feature",
+    "name": "Adding numbers",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "adding-numbers;adding-two-numbers",
+        "keyword": "Scenario",
+        "name": "Adding two numbers",
+        "description": "",
+        "line": 2,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I add 2 and 2",
+            "line": 3,
+            "match": {
+              "location": "features/step_definitions/sample_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the output should be 4",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/sample_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1950000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
