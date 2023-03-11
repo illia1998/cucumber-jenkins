@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'bundle install'
+                sh 'bundle _2.3.26_ install'
             }
         }
     }
