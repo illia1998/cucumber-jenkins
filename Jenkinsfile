@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'bundle install'
+                sh 'sudo bundle install'
             }
         }
     }
