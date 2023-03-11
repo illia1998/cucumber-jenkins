@@ -18,7 +18,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'chown -R $USER:$USER /usr/local/rvm/rubies/ruby-3.1.2/lib/ruby/gems'
-                sh 'bundle install'
+                sh 'sudo bundle install'
             }
         }
     }
