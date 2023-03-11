@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'echo password | sudo -S bundle install'
+                sh 'sudo bundle install'
             }
         }
     }
