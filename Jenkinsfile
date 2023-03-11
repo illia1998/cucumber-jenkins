@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Ruby Version') {
             steps {
+                sh 'bash -l'
                 sh 'ruby --version'
             }
         }
