@@ -17,8 +17,6 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'apt-get update'
-                sh 'apt-get install -y make'
                 sh 'bundle config set path "vendor/bundle"'
                 sh 'bundle install'
             }
