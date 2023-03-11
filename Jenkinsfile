@@ -15,5 +15,10 @@ pipeline {
                 sh 'ruby script.rb'
             }
         }
+        stage('Execute Script') {
+            steps {
+                sh 'bundle install'
+            }
+        }
     }
 }
