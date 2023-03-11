@@ -11,6 +11,7 @@ RUN apt-get update && \
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc && \
     source ~/.bashrc && \
     rbenv install 3.1.2 && \
-    rbenv global 3.1.2 && 
+    rbenv global 3.1.2 && \
+    gem install bundler
 
 USER jenkins
