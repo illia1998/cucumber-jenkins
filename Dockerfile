@@ -2,11 +2,12 @@ FROM jenkins/jenkins:lts-jdk11
 
 USER root
 
-RUN apt-get update && apt-get install -y --no-install-recommends --no-install-suggests curl bzip2 build-essential libssl-dev libreadline-dev zlib1g-dev && \
-  rm -rf /var/lib/apt/lists/* && \
-  curl -L https://github.com/sstephenson/ruby-build/archive/v20180329.tar.gz | tar -zxvf - -C /tmp/ && \
-  cd /tmp/ruby-build-* && ./install.sh && cd / && \
-  ruby-build -v 3.0.0 /usr/local && rm -rfv /tmp/ruby-build-* && \
-  gem install bundler --no-rdoc --no-ri
+RUN apt-get update && \
+    apt-get install -y curl gnupg && \
+    curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
+    curl -sSL https://get.rvm.io | bash -s stable && \
+    /bin/bash -c "source /etc/profile.d/rvm.sh && \
+        rvm install 3.1.2 && \
+        rvm use 3.1.2 --default"
 
 USER jenkins
