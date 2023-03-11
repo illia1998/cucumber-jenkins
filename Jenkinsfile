@@ -17,7 +17,6 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'bundle config set path "vendor/bundle"'
                 sh 'bundle install'
             }
         }
