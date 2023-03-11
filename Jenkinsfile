@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'echo <password> | sudo -S /usr/local/rvm/rubies/ruby-3.1.2/bin/bundle install'
+                sh "echo password | sudo -S bundle install"
             }
         }
     }
