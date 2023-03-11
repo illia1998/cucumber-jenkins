@@ -15,7 +15,7 @@ pipeline {
                 sh 'ruby script.rb'
             }
         }
-        stage('Execute Script') {
+        stage('Install Dependencies') {
             steps {
                 sh 'bundle install'
             }
