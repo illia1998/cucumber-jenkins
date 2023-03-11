@@ -12,6 +12,8 @@ RUN bash -c -l 'rvm install ruby-3.1.2'
 
 RUN bash -c -l 'rvm --default use 3.1.2'
 
-RUN bash -c -l 'sudo gem install bundler -v 2.3.26'
+RUN bash -c -l 'gem install bundler -v 2.3.26'
 
+RUN apt-get update && apt-get -y install sudo
+      
 USER jenkins
