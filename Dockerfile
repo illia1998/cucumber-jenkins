@@ -12,5 +12,6 @@ RUN bash -c -l 'rvm install ruby-3.1.2'
 
 RUN bash -c -l 'rvm --default use 3.1.2'
 
+RUN bash -c -l 'gem install bundler --no-ri --no-rdoc'
 
 USER jenkins
