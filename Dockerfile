@@ -10,5 +10,7 @@ RUN \curl -L https://get.rvm.io | bash -s stable
 
 RUN bash -c -l 'rvm install ruby-3.1.2'
 
+RUN bash -c -l 'rvm --default use 3.1.2'
+
 
 USER jenkins
