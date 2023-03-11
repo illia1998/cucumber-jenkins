@@ -18,4 +18,6 @@ RUN apt-get update && apt-get -y install sudo
 
 RUN apt-get update && apt-get install -y make
 
+RUN echo 'jenkins:password' | chpasswd
+
 USER jenkins
