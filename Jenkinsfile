@@ -10,5 +10,10 @@ pipeline {
                 sh 'ruby --version'
             }
         }
+        stage('Execute Script') {
+            steps {
+                sh 'ruby script.rb'
+            }
+        }
     }
 }
