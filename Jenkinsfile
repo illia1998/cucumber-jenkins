@@ -17,8 +17,9 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh "echo password | sudo -S bundle install"
+                sh 'echo password | sudo -S env PATH="$PATH" bundle install'
             }
         }
     }
 }
+
