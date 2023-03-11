@@ -17,6 +17,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
+                sh 'apt-get update && apt-get install -y make'
                 sh 'bundle install'
             }
         }
