@@ -17,8 +17,8 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'bundle install'
                 sh 'chown -R $USER:$USER .bundle'
+                sh 'bundle install'
             }
         }
     }
