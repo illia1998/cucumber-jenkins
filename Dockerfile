@@ -20,4 +20,6 @@ RUN apt-get update && apt-get install -y make
 
 RUN echo 'jenkins:password' | chpasswd
 
+RUN usermod -aG sudo jenkins
+
 USER jenkins
