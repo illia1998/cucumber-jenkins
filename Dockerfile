@@ -22,4 +22,6 @@ RUN echo 'jenkins:password' | chpasswd
 
 RUN usermod -aG sudo jenkins
 
+RUN echo 'jenkins ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+
 USER jenkins
