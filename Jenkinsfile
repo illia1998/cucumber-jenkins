@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'sudo ln -s /bin/mkdir /usr/bin/mkdir'
+                sh 'echo password | sudo -S ln -s /bin/mkdir /usr/bin/mkdir'
                 sh 'echo password | sudo -S env PATH="$PATH" bundle install'
             }
         }
