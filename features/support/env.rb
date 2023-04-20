@@ -6,5 +6,5 @@ AllureCucumber.configure do |config|
 end
 
 at_exit do
-  system('allure generate report/allure-results --clean')
+  system('allure generate results/report/allure-results --clean')
 end
