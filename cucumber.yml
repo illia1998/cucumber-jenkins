@@ -1,1 +1,1 @@
-default: --publish-quiet -f junit --out results/junit.xml -f json --out results/json.json -f pretty --strict -f AllureCucumber::CucumberFormatter -o results/allure-results
+default: --publish-quiet -f junit --out results/junit.xml -f json --out results/json.json -f pretty --strict -f AllureCucumber::CucumberFormatter -o report/allure-results
